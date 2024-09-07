@@ -1,9 +1,15 @@
-import * as routePaths from "@constants/routePaths";
-import { Home, Navigate, LoginPage, Suspense, Loading } from "@imports";
+import {
+  Home,
+  Navigate,
+  Suspense,
+  Loading,
+  routePaths,
+  LoginPage,
+} from "@imports";
 import { ReactElement } from "react";
 
 type PropsType = {
-  children: ReactElement;
+  children: ReactElement,
 };
 
 const IsAuthed: React.FC<PropsType> = ({ children }) => {
@@ -35,9 +41,7 @@ export const routes = [
         <IsAuthed>
           <Home />
         </IsAuthed>
-
       </Suspense>
-
     ),
     isPublic: true,
   },
