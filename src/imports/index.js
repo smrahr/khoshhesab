@@ -1,8 +1,8 @@
 // /////////////////////PAGE/////////////////////
-import Loading from "../common/Loading";
 export { default as Home } from "@pages/Home";
 export { default as LoginPage } from "@pages/Auth/LoginPage";
-export { default as Loading } from "@pages/Auth/LoadingPage";
+export { default as Loading } from "@common/Loading";
+export { default as Layout } from "@layout/Layout";
 
 // /////////////////////PACKAGE/////////////////////
 export {
@@ -33,6 +33,5 @@ export {
 } from "react";
 
 export { ThreeDots } from "react-loader-spinner";
-
 
 export * as routePaths from "@constants/routePaths";
