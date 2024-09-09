@@ -15,6 +15,13 @@ export {
   useNavigate,
   useSearchParams,
 } from "react-router-dom";
+export {
+  useQueryClient,
+  QueryClient,
+  QueryClientProvider,
+  useMutation,
+  useQuery,
+} from "@tanstack/react-query";
 
 export {
   default as React,
