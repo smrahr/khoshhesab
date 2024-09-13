@@ -1,7 +1,106 @@
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
+  background-color: rgb(var(--color-primary-700));
+  background-image: url(../src/assets/background.png),
+    url(../src/assets/background-second.png);
+  background-position: right top, right top;
+  background-repeat: no-repeat, no-repeat;
+  min-height: 100vh;
 }
 
+@font-face {
+  font-family: iransans;
+  src: url("./fonts/iransans/IRANSansWeb_UltraLight.woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: iransans;
+  src: url("./fonts/iransans/IRANSansWeb_Light.woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: iransans;
+  src: url("./fonts/iransans/IRANSansWeb.woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: iransans;
+  src: url("./fonts/iransans/IRANSansWeb_Medium.woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: iransans;
+  src: url("./fonts/iransans/IRANSansWeb_Bold.woff2");
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: iransans;
+  src: url("./fonts/iransans/IRANSansWeb_Black.woff2");
+  font-weight: 900;
+  font-style: normal;
+}
+/* // number fonts */
+
+@font-face {
+  font-family: iransans;
+  src: url("./fonts/iransans/num/IRANSansWeb\(FaNum\)_UltraLight.woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: iransans;
+  src: url("./fonts/iransans/IRANSansWeb_Light.woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: iransans;
+  src: url("./fonts/iransans/num/IRANSansWeb\(FaNum\).woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: iransans;
+  src: url("./fonts/iransans/num/IRANSansWeb\(FaNum\)_Medium.woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: iransans;
+  src: url("./fonts/iransans/IRANSansWeb_Bold.woff2");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: iransans;
+  src: url("./fonts/iransans/IRANSansWeb_Black.woff2");
+  font-weight: 900;
+  font-style: normal;
+}
+
+* {
+  font-family: iransans;
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  margin: 0 auto;
+}
