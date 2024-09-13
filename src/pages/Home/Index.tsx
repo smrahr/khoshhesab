@@ -1,10 +1,5 @@
-
 function Index() {
-    return (
-        <div>
-            Home
-        </div>
-    )
+  return <div>سلام</div>;
 }
 
-export default Index
+export default Index;

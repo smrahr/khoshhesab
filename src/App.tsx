@@ -1,11 +1,8 @@
-
-import {
-  Layout
-} from "@imports";
-import { ReactElement, useState } from 'react';
-import './App.css'
+import { Layout } from "@imports";
+import { ReactElement, useState } from "react";
+import "./App.css";
 import { isPublicRoute, routes } from "@src/routes";
-import { Route, Routes, useLocation } from 'react-router-dom';
+import { Route, Routes, useLocation } from "react-router-dom";
 
 type RoutesType = {
   element: ReactElement;
@@ -13,11 +10,8 @@ type RoutesType = {
   path: string;
 };
 
-
 function App() {
   const { pathname } = useLocation();
-
-
 
   const renderRoutes = () => {
     if (isPublicRoute(pathname)) {
@@ -41,12 +35,7 @@ function App() {
     }
   };
 
-  return (
-    <h1 className="text-3xl font-bold underline">
-      sdddsfdsf
-      {renderRoutes()}
-    </h1>
-  )
+  return <div>{renderRoutes()}</div>;
 }
 
-export default App
+export default App;

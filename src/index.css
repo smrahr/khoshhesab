@@ -2,3 +2,281 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  :root {
+    --color-primary-900: 8, 84, 84;
+    --color-primary-800: 11, 95, 95;
+    --color-primary-700: 12, 103, 103;
+
+    --color-secondary-900: 38, 50, 56;
+    --color-secondary-800: 55, 71, 79;
+    --color-secondary-700: 69, 90, 100;
+    --color-secondary-600: 84, 110, 122;
+    --color-secondary-500: 96, 125, 139;
+    --color-secondary-400: 120, 144, 156;
+    --color-secondary-300: 120, 144, 156;
+    --color-secondary-200: 176, 190, 197;
+    --color-secondary-100: 207, 216, 220;
+    --color-secondary-50: 236, 239, 241;
+
+    --color-tertiary-900: 255, 118, 64;
+
+    --color-disable-900: 129, 129, 129;
+    --color-disable-800: 185, 185, 185;
+
+    --color-success: 85, 139, 47;
+    --color-warning: 255, 179, 0;
+    --color-error: 244, 67, 54;
+
+    --dark-Shadow: 17, 17, 17;
+  }
+
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
+
+@layer components {
+  * {
+    @apply duration-100;
+  }
+
+  .textField__input {
+    @apply w-full py-3 px-4 h-[40px] rounded-md bg-white text-secondary-900 border border-gray-300 outline-none transition-all ease-in-out hover:border-secondary-500 focus:outline-none focus:border-secondary-600 focus:shadow-input-focus focus:bg-white;
+  }
+
+  .textField__disabled {
+    @apply cursor-not-allowed select-none bg-secondary-100 hover:border-transparent;
+  }
+
+  .textField__input::placeholder {
+    @apply font-light text-xs md:text-base;
+    font-size: 12px;
+  }
+
+  .textField__input.textField__center {
+    text-align: center;
+  }
+
+  .btn {
+    @apply px-2 py-1 font-bold text-[14px] md:text-base rounded-md transition-all;
+  }
+
+  .btn--secondary {
+    @apply px-4 py-3 bg-secondary-700 text-white hover:bg-secondary-800 hover:shadow-secondary-500;
+  }
+
+  .btn--tertiary {
+    @apply px-4 py-3 bg-tertiary-900 text-white hover:bg-secondary-800 hover:shadow-secondary-500;
+  }
+
+  .btn--error {
+    @apply px-4 py-3 bg-red-700 text-white hover:bg-red-800 hover:shadow-red-500;
+  }
+
+  .btn--disable {
+    @apply px-4 py-3 text-disable-900 bg-disable-800 cursor-not-allowed select-none;
+  }
+
+  .table__th {
+    @apply p-2 md:p-3 pr-3 md:pr-8 pb-3 text-right text-secondary-900 text-base font-bold;
+  }
+
+  .table__td {
+    @apply p-2 md:p-3 pr-3 md:pr-8 text-right text-xs md:text-sm;
+  }
+
+  table tbody tr:nth-child(odd) {
+    @apply bg-secondary-50;
+  }
+
+  .badge {
+    @apply whitespace-nowrap px-2 rounded-lg;
+  }
+
+  .badge--secondary {
+    @apply bg-secondary-600 text-white;
+  }
+
+  .badge--success {
+    @apply bg-green-600 text-white;
+  }
+
+  .badge--error {
+    @apply bg-rose-600 text-white;
+  }
+
+  .badge--extra-error {
+    @apply bg-rose-900 text-white;
+  }
+
+  .badge--paxcketCategory {
+    @apply bg-blue-400 text-white;
+  }
+
+  .badge--boxCategory {
+    @apply bg-blue-600 text-white;
+  }
+
+  html,
+  body {
+    @apply p-0 m-0 min-h-[100vh] select-none;
+  }
+
+  .tooltip .tooltiptext {
+    @apply invisible transition-none whitespace-nowrap bg-white text-xs top-[-30px] right-0 shadow-lg ring-1 ring-secondary-100 text-center rounded-md py-1 px-2 absolute;
+  }
+
+  .tooltip:hover .tooltiptext {
+    @apply visible;
+  }
+
+  .SelectField__input {
+    @apply w-full rounded-md text-right text-secondary-900 bg-secondary-400 outline-none transition-all ease-in-out hover:border-secondary-500 focus:outline-none focus:border-secondary-600 focus:shadow-input-focus focus:bg-white;
+  }
+
+  .SelectField__input .SelectField__control {
+    @apply bg-white hover:border-secondary-500;
+  }
+
+  .SelectField__input .SelectField__menu {
+    @apply bg-white border-2 border-white;
+  }
+
+  .SelectField__input .SelectField__option {
+    @apply text-neutral-600 bg-white hover:bg-secondary-100;
+  }
+
+  .SelectField__input .SelectField__indicator-separator {
+    @apply bg-neutral-400;
+  }
+
+  .SelectField__input .SelectField__input-container,
+  .SelectField__input .SelectField__placeholder,
+  .SelectField__input .SelectField__single-value {
+    @apply text-neutral-600;
+  }
+
+  .disabled_SelectField__input .SelectField__control {
+    @apply bg-secondary-100;
+  }
+
+  .captchaCanvas div {
+    @apply flex items-center justify-between gap-2;
+  }
+
+  .captchaCanvas #reload_href {
+    @apply text-xs rounded-md transition-all p-2 bg-secondary-700 text-white hover:bg-secondary-800 hover:shadow-secondary-500;
+  }
+
+  .captchaCanvas div canvas {
+    @apply border border-secondary-400 rounded-md shadow-md;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f2f4;
+  border-radius: 0px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #c3c3ce;
+  border-radius: 0px;
+}
+
+/* unset overflow for (colFilters) in ag-grid */
+.ag-tabs.ag-menu.ag-focus-managed {
+  overflow: unset !important;
+}
+
+/* unset underline for links in hover */
+a:hover {
+  text-decoration: none !important;
+}
+
+.loader {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: block;
+  margin: 15px auto;
+  position: relative;
+  background: #fff;
+  box-shadow: -24px 0 #fff, 24px 0 #fff;
+  box-sizing: border-box;
+  animation: shadowPulse 2s linear infinite;
+}
+
+@keyframes shadowPulse {
+  33% {
+    background: #fff;
+    box-shadow: -24px 0 #8e55fb, 24px 0 #fff;
+  }
+
+  66% {
+    background: #8e55fb;
+    box-shadow: -24px 0 #fff, 24px 0 #fff;
+  }
+
+  100% {
+    background: #fff;
+    box-shadow: -24px 0 #fff, 24px 0 #8e55fb;
+  }
+}
+
+/* drow icon styles */
+.leaflet-div-icon.leaflet-editing-icon,
+.leaflet-div-icon.leaflet-editing-touch-icon {
+  background-color: blue !important;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 50%;
+  width: 10px !important;
+  height: 10px !important;
+}
+
+.radius-sm {
+  border-radius: 8px;
+}
+
+.marginTop-sm {
+  padding-top: 16px;
+}
+
+.marginTop-md {
+  padding-top: 32px;
+}
+
+.marginTop-lg {
+  padding-top: 72px;
+}
+
+.paddingTop-sm {
+  padding-top: 16px;
+}
+
+.paddingTop-md {
+  padding-top: 32px;
+}
+
+.paddingTop-lg {
+  padding-top: 72px;
+}
+
+.text-paragh {
+  font-size: 12px;
+}
+
+.text-title {
+  font-size: 16px;
+}

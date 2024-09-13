@@ -7,10 +7,10 @@ import {
   LoginPage,
 } from "@imports";
 import { ReactElement } from "react";
-import { HOME } from './constants/routePaths';
+import { HOME } from "./constants/routePaths";
 
 type PropsType = {
-  children: ReactElement,
+  children: ReactElement;
 };
 
 const IsAuthed: React.FC<PropsType> = ({ children }) => {
@@ -22,9 +22,6 @@ const IsGuest: React.FC<PropsType> = ({ children }) => {
   // const { isLoggedIn } = useAuth();
   return !false ? children : <Navigate to={routePaths.MAIN} />;
 };
-
-
-
 
 export const routes = [
   // public routes
@@ -53,16 +50,10 @@ export const routes = [
 export const isPublicRoute = (path: string) => {
   let isPublic = false;
   for (var key in routes) {
-    if (
-      routes.hasOwnProperty(key) &&
-      routes[key].path === path
-    ) {
+    if (routes.hasOwnProperty(key) && routes[key].path === path) {
       isPublic = routes[key].isPublic === true;
       break;
     }
   }
   return isPublic;
 };
-
-console.log(isPublicRoute("/"), "isPublicRoute")
-
