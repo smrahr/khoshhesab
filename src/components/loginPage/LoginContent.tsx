@@ -52,8 +52,8 @@ const LoginContent = () => {
       ) : (
         <>
           <p className="text-[12px] p-4">
-            کد چهار رقمی ارسال شده به شماره
-            <span>{toPersianDigits(9025525849)}</span> را وارد کنید
+            کد چهار رقمی ارسال شده به شماره <span>09025525849</span>
+            را وارد کنید
           </p>
           <CodeForm submitHandler={submitCodeForm} timer={timer} />
           <div className="flex text-paragh justify-center items-center gap-2 marginTop-md">
