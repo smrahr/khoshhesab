@@ -7,7 +7,6 @@ import {
   Yup,
   yupResolver,
 } from "@src/imports";
-import { toPersianDigits } from "@src/utils/numberHelpers";
 import { SubmitCodeFormInputType } from "@src/types/loginPageTypes";
 
 let formSchema = Yup.object().shape({

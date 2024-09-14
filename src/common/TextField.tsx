@@ -82,9 +82,7 @@ const TextField: React.FC<TextFieldProps> = ({
             onBlurCapture={onBlurValue}
             disabled={disabled}
             dir={`${type === "number" ? "ltr" : "rtl"}`}
-            placeholder={
-              type === "number" ? toPersianDigits(+placeholder) : placeholder
-            }
+            placeholder={placeholder}
             autoComplete="off"
             className={`${className} ${
               disabled ? "textField__disabled" : ""
