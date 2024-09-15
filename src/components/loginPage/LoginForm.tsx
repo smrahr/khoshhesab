@@ -7,7 +7,6 @@ import {
   Yup,
   yupResolver,
 } from "@src/imports";
-import { toPersianDigits } from "@src/utils/numberHelpers";
 import { SubmitLoginFormInputType } from "@src/types/loginPageTypes";
 
 const phoneRegExp = /^09\d{9}$/;
@@ -41,9 +40,7 @@ const LoginForm: React.FC<LoginFormPropsType> = ({ submitHandler }) => {
   const numberInputChangeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
     let value = e.target.value;
     let justNumberValue = getJustNumber(value);
-    console.log(toPersianDigits(+e.target.value));
     const name = e.target.name as SetValueDataType;
-
     setValue(name, justNumberValue);
   };
 
