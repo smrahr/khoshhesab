@@ -1,9 +1,3 @@
-///////////////////////PAGES/////////////////////
-export { default as Home } from "@pages/Home";
-export { default as LoginPage } from "@pages/Auth/LoginPage";
-export { default as Loading } from "@common/Loading";
-export { default as Layout } from "@layout/Layout";
-
 ///////////////////////PACKAGES/////////////////////
 export {
   Link,
@@ -53,6 +47,11 @@ export {
 } from "react-icons/fa";
 export { IoIosRefresh } from "react-icons/io";
 
+///////////////////////PAGES/////////////////////
+export { default as Home } from "@pages/Home";
+export { default as LoginPage } from "@pages/Auth/LoginPage";
+export { default as RegisterPage } from "@pages/Auth/RegisterPage";
+
 ///////////////////////COMPONENTS/////////////////////
 export {
   toPersianDigits,
@@ -65,3 +64,6 @@ export { default as LoginContent } from "@src/components/loginPage/LoginContent"
 export { default as LoginForm } from "@src/components/loginPage/LoginForm";
 export { default as CodeForm } from "@src/components/loginPage/CodeForm";
 export { default as Button } from "@src/common/Button";
+export { default as Loading } from "@common/Loading";
+export { default as Layout } from "@layout/Layout";
+export { default as RegisterForm } from "@src/components/register/RegisterForm";

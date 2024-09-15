@@ -5,6 +5,7 @@ import {
   Loading,
   routePaths,
   LoginPage,
+  RegisterPage,
 } from "@imports";
 import { ReactElement } from "react";
 import { HOME } from "./constants/routePaths";
@@ -30,6 +31,15 @@ export const routes = [
     element: (
       <IsGuest>
         <LoginPage />
+      </IsGuest>
+    ),
+    isPublic: true,
+  },
+  {
+    path: routePaths.REGISTER_PAGE,
+    element: (
+      <IsGuest>
+        <RegisterPage />
       </IsGuest>
     ),
     isPublic: true,
