@@ -51,6 +51,7 @@ export {
   FaTrash,
   FaUser,
 } from "react-icons/fa";
+export { IoIosRefresh } from "react-icons/io";
 
 ///////////////////////COMPONENTS/////////////////////
 export {

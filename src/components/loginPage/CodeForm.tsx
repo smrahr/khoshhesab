@@ -1,4 +1,3 @@
-import { useForm } from "react-hook-form";
 import {
   Button,
   CommonTextField,
@@ -6,6 +5,8 @@ import {
   useState,
   Yup,
   yupResolver,
+  useForm,
+  IoIosRefresh,
 } from "@src/imports";
 import { SubmitCodeFormInputType } from "@src/types/loginPageTypes";
 
@@ -18,9 +19,14 @@ type SetValueDataType = "code";
 type CodeFormPropsType = {
   submitHandler: (data: SubmitCodeFormInputType) => void;
   timer: number;
+  isTimerButtonDisable: boolean;
 };
 
-const CodeForm: React.FC<CodeFormPropsType> = ({ submitHandler, timer }) => {
+const CodeForm: React.FC<CodeFormPropsType> = ({
+  submitHandler,
+  timer,
+  isTimerButtonDisable,
+}) => {
   const {
     register,
     handleSubmit,
@@ -34,6 +40,8 @@ const CodeForm: React.FC<CodeFormPropsType> = ({ submitHandler, timer }) => {
 
   const [isButtonDisabled, setIsButtonDisabled] = useState(true);
 
+  console.log(isTimerButtonDisable, "isTimerButtonDisable");
+
   const numberInputChangeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
     let value = e.target.value;
     let justNumberValue = getJustNumber(value);
@@ -46,8 +54,8 @@ const CodeForm: React.FC<CodeFormPropsType> = ({ submitHandler, timer }) => {
       className="w-full flex flex-col gap-4 items-center"
       onSubmit={handleSubmit((data) => submitHandler(data))}
     >
-      <div className="w-[232px] flex gap-3">
-        <div>
+      <div className="w-[90%] flex justify-between gap-3  ">
+        <div className="w-[50%]">
           <CommonTextField
             name="code"
             label=""
@@ -57,6 +65,7 @@ const CodeForm: React.FC<CodeFormPropsType> = ({ submitHandler, timer }) => {
             error={errors.code?.message}
             onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
               numberInputChangeHandler(e);
+              setIsButtonDisabled(!(e.target.value.length === 4));
             }}
             className="border-primary-700"
             dir="center"
@@ -64,9 +73,20 @@ const CodeForm: React.FC<CodeFormPropsType> = ({ submitHandler, timer }) => {
           />
         </div>
 
-        <div className="text-xs w-[200px] h-[40px] border border-gray-400 rounded-md flex justify-center items-center gap-2 text-gray-400">
-          <span>{timer}</span>
-          <span>ارسال مجدد</span>
+        <div className="w-[50%] h-[40px] ">
+          <Button
+            className={`bg-white w-full text-xs border rounded-md flex  items-center gap-2 border-gray-400 text-gray-400  h-[40px] ${
+              isTimerButtonDisable
+                ? "btn--disable"
+                : "border-gray-800 text-gray-800  px-4 py-3"
+            }`}
+            disabled={isTimerButtonDisable}
+          >
+            <div className="w-[20px]">
+              {isTimerButtonDisable ? timer : <IoIosRefresh />}
+            </div>
+            <span>ارسال مجدد</span>
+          </Button>
         </div>
       </div>
       <div className="marginTop-lg">
