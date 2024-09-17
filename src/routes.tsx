@@ -5,9 +5,10 @@ import {
   Loading,
   routePaths,
   LoginPage,
+  Dashboard,
 } from "@imports";
 import { ReactElement } from "react";
-import { HOME } from "./constants/routePaths";
+import { DASHBOARD } from "./constants/routePaths";
 
 type PropsType = {
   children: ReactElement;
@@ -44,6 +45,17 @@ export const routes = [
       </Suspense>
     ),
     isPublic: true,
+  },
+  {
+    path: routePaths.DASHBOARD,
+    element: (
+      <Suspense fallback={<Loading color="#9552FF" />}>
+        <IsAuthed>
+          <Dashboard />
+        </IsAuthed>
+      </Suspense>
+    ),
+    isPublic: false,
   },
 ];
 
