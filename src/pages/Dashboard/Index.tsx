@@ -1,5 +1,5 @@
 function Index() {
-  return <div>سلام</div>;
+  return <div className="p-5">سلام</div>;
 }
 
 export default Index;
