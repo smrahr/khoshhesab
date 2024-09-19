@@ -5,10 +5,10 @@ import {
   Loading,
   routePaths,
   LoginPage,
+  RegisterPage,
   Dashboard,
 } from "@imports";
 import { ReactElement } from "react";
-import { DASHBOARD } from "./constants/routePaths";
 
 type PropsType = {
   children: ReactElement;
@@ -31,6 +31,15 @@ export const routes = [
     element: (
       <IsGuest>
         <LoginPage />
+      </IsGuest>
+    ),
+    isPublic: true,
+  },
+  {
+    path: routePaths.REGISTER_PAGE,
+    element: (
+      <IsGuest>
+        <RegisterPage />
       </IsGuest>
     ),
     isPublic: true,

@@ -43,7 +43,8 @@
     @apply duration-100;
   }
 
-  .textField__input {
+  .textField__input,
+  select {
     @apply w-full py-3 px-4 h-[40px] rounded-md bg-white text-secondary-900 border border-gray-300 outline-none transition-all ease-in-out hover:border-secondary-500 focus:outline-none focus:border-secondary-600 focus:shadow-input-focus focus:bg-white;
   }
 
@@ -51,9 +52,15 @@
     @apply cursor-not-allowed select-none bg-secondary-100 hover:border-transparent;
   }
 
-  .textField__input::placeholder {
+  .textField__input::placeholder,
+  select::placeholder,
+  select {
     @apply font-light text-xs md:text-base;
     font-size: 12px;
+  }
+
+  select {
+    padding-bottom: 10px;
   }
 
   .textField__input.textField__center {
@@ -133,20 +140,23 @@
     @apply visible;
   }
 
-  .SelectField__input {
-    @apply w-full rounded-md text-right text-secondary-900 bg-secondary-400 outline-none transition-all ease-in-out hover:border-secondary-500 focus:outline-none focus:border-secondary-600 focus:shadow-input-focus focus:bg-white;
+  .SelectField__input,
+  select {
+    @apply w-full rounded-md text-right text-secondary-900 bg-white outline-none transition-all ease-in-out hover:border-secondary-500 focus:outline-none focus:border-secondary-600 focus:shadow-input-focus focus:bg-white;
   }
 
   .SelectField__input .SelectField__control {
     @apply bg-white hover:border-secondary-500;
   }
 
-  .SelectField__input .SelectField__menu {
+  .SelectField__input .SelectField__menu,
+  select menu {
     @apply bg-white border-2 border-white;
   }
 
-  .SelectField__input .SelectField__option {
-    @apply text-neutral-600 bg-white hover:bg-secondary-100;
+  .SelectField__input .SelectField__option,
+  select option {
+    @apply w-full text-neutral-600 bg-white hover:bg-gray-100;
   }
 
   .SelectField__input .SelectField__indicator-separator {

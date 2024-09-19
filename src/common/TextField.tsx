@@ -86,7 +86,7 @@ const TextField: React.FC<TextFieldProps> = ({
               disabled ? "textField__disabled" : ""
             } textField__input ${extraStyle} ${
               type === "number" ? "text-left" : "text-right"
-            } ${dir === "center" ? "textField__center" : ""}`}
+            } ${dir === "center" ? "textField__center" : "text-right"}`}
             type="text"
             name={name}
             id={name}

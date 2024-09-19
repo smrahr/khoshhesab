@@ -1,5 +1,11 @@
-import LoginForm from "./LoginForm";
-import { Link, useEffect, useState, CodeForm, Loading } from "@src/imports";
+import {
+  Link,
+  useEffect,
+  useState,
+  CodeForm,
+  Loading,
+  LoginForm,
+} from "@src/imports";
 import {
   SubmitLoginFormInputType,
   SubmitCodeFormInputType,
@@ -58,7 +64,7 @@ const LoginContent = () => {
     <div>
       {true ? (
         <div className="container bg-white min-w-[296px] max-w-[70%] h-[450px] radius-sm">
-          <h2 className="bold text-primary-900 paddingTop-md text-title">
+          <h2 className="bold text-primary-900 paddingTop-md text-title ">
             ورود به خوش حساب
           </h2>
           {/* !isSendingCode */}
