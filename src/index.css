@@ -129,7 +129,7 @@
 
   html,
   body {
-    @apply p-0 m-0 min-h-[100vh] select-none;
+    @apply p-0 m-0  select-none;
   }
 
   .tooltip .tooltiptext {
@@ -260,15 +260,15 @@ a:hover {
 }
 
 .marginTop-sm {
-  padding-top: 16px;
+  margin-top: 16px;
 }
 
 .marginTop-md {
-  padding-top: 32px;
+  margin-top: 32px;
 }
 
 .marginTop-lg {
-  padding-top: 72px;
+  margin-top: 72px;
 }
 
 .paddingTop-sm {

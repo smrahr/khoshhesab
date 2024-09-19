@@ -74,7 +74,17 @@ export { default as Loading } from "@common/Loading";
 export { default as Layout } from "@layout/Layout";
 export { default as RegisterForm } from "@src/components/register/RegisterForm";
 export { default as Header } from "@layout/Header";
-export { default as Footer } from "@layout/Footer";
+export { default as AddEvidence } from "@layout/AddEvidence";
+export { default as BalanceCard } from "@src/components/dashboard/BalanceCard";
+export { default as Exchanges } from "@src/components/dashboard/Exchanges";
+export { default as MainDivitions } from "@src/components/dashboard/MainDivitions";
+export { default as ProfitAndLoss } from "@src/components/dashboard/ProfitAndLoss";
 
 ///////////////////////CONSTANTS/////////////////////
 export { daysOfWeek } from "@src/constants/general";
+
+///////////////////////IMAGES/////////////////////
+export { default as BANKICON } from "@src/assets/banksIcon.svg";
+export { default as REPORTICON } from "@src/assets/reportsIcon.svg";
+export { default as ACCOUNTINGICON } from "@src/assets/accountingIcon.svg";
+export { default as PEOPLEICON } from "@src/assets/peopleIcon.svg";

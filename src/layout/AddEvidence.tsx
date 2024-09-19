@@ -1,17 +1,17 @@
 import { TiPlus, Button } from "@imports";
 
-const Footer = () => {
+const AddEvidence = () => {
   return (
-    <div className="w-full h-full bg-tertiary-900 text-white rounded-t-lg">
+    <div className="w-full h-full bg-tertiary-900 text-white rounded-t-lg border border-white">
       <Button
         className={`w-full h-full flex justify-center items-center gap-1`}
         disabled={false}
       >
         <TiPlus />
-        <p>افزودن سند جدید</p>{" "}
+        <p>افزودن سند جدید</p>
       </Button>
     </div>
   );
 };
 
-export default Footer;
+export default AddEvidence;

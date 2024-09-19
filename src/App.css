@@ -101,5 +101,11 @@
     url(../src/assets/background-second.png);
   background-position: right top, right top;
   background-repeat: no-repeat, no-repeat;
-  min-height: 100vh;
+}
+
+.hide-scroll {
+  ::-webkit-scrollbar {
+    height: 0px !important;
+    background: transparent !important; /* make scrollbar transparent */
+  }
 }
