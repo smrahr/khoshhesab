@@ -1,4 +1,4 @@
-import { Layout } from "@imports";
+import { Home, Layout } from "@imports";
 import "./App.css";
 import { isPublicRoute, routes } from "@src/routes";
 import { Route, Routes, useLocation } from "react-router-dom";
